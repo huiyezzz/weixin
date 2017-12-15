@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="had.wx.mapper.StaffMapper">
+    <select id="query" resultType="had.wx.po.Staff">
+        select *  from staff ;
+    </select>
+    <select id="queryByState" resultType="had.wx.po.Staff" parameterType="int">
+        select *  from staff where state=#{id};
+    </select>
+   <update id="updateById" parameterType="had.wx.po.StaffCustom">
+       update staff set state=1,yn='通过'
+       <where>
+           <include refid="Byids"></include>
+       </where>
+   </update>
+    <update id="updateById2" parameterType="had.wx.po.StaffCustom">
+        update staff set state=1,yn='未通过'
+        <where>
+            <include refid="Byids"></include>
+        </where>
+    </update>
+
+    <sql id="Byids">
+        <if test="ids!=null">
+            <foreach collection="ids" item="id_item" open="(" close=")" separator="or">
+                u_id=#{id_item}
+            </foreach>
+        </if>
+    </sql>
+</mapper>

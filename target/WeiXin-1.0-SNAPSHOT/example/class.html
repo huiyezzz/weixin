@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
+    <title>WeUI</title>
+    <link rel="stylesheet" href="../style/weui.css"/>
+    <link rel="stylesheet" href="./example.css"/>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body ontouchstart>
+
+	<div class="page__bd" style="height: 100%;">
+        <div class="table-responsive"  id="table1" style="display: none">
+            <table class="table table-striped"  >
+                <tr>
+                    <td class="active">id</td>
+                    <td class="success">姓名</td>
+                    <td class="warning">性别</td>
+                    <td class="danger">状态</td>
+                    <td class="info">选择</td>
+                </tr>
+                <tr>
+                    <td class="active">3</td>
+                    <td class="success">success</td>
+                    <td class="warning">warning</td>
+                    <td class="danger">danger</td>
+                    <td class="info"><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td class="active">4</td>
+                    <td class="success">success</td>
+                    <td class="warning">warning</td>
+                    <td class="danger">danger</td>
+                    <td class="info"><input type="checkbox"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="table-responsive"  id="table2" style="display: none">
+            <table class="table table-striped"  >
+                <tr>
+                    <td class="active">id</td>
+                    <td class="success">姓名</td>
+                    <td class="warning">性别</td>
+                    <td class="danger">状态</td>
+                    <td class="info">选择</td>
+                </tr>
+                <tr>
+                    <td class="active">1</td>
+                    <td class="success">success</td>
+                    <td class="warning">warning</td>
+                    <td class="danger">danger</td>
+                    <td class="info"><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td class="active">2</td>
+                    <td class="success">success</td>
+                    <td class="warning">warning</td>
+                    <td class="danger">danger</td>
+                    <td class="info"><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td class="active">1</td>
+                    <td class="success">success</td>
+                    <td class="warning">warning</td>
+                    <td class="danger">danger</td>
+                    <td class="info"><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td class="active">1</td>
+                    <td class="success">success</td>
+                    <td class="warning">warning</td>
+                    <td class="danger">danger</td>
+                    <td class="info"><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td class="active">1</td>
+                    <td class="success">success</td>
+                    <td class="warning">warning</td>
+                    <td class="danger">danger</td>
+                    <td class="info"><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td class="active">1</td>
+                    <td class="success">success</td>
+                    <td class="warning">warning</td>
+                    <td class="danger">danger</td>
+                    <td class="info"><input type="checkbox"></td>
+                </tr>
+            </table>
+        </div>
+
+
+        <!--<div class="weui-tab">-->
+            <!--<div class="weui-tab__panel">-->
+
+            <!--</div>-->
+        <div class="table-responsive"  id="dibu1" style="display:block">
+            <div class="weui-tabbar2">
+                <a href="javascript:;" class="weui-tabbar__item" id="yishenpi" onclick="a(this.id)">
+                    <span style="display: inline-block;position: relative;">
+                        <img src="./images/icon_nav_toast.png" alt="" class="weui-tabbar__icon">
+                        <!--<span class="weui-badge" style="position: absolute;top: -2px;right: -13px;">8</span>-->
+                    </span>
+                    <p class="weui-tabbar__label">已审批</p>
+                </a>
+                <a href="javascript:;" class="weui-tabbar__item" id="daishenpi" onclick="a(this.id)">
+                    <img src="./images/icon_nav_icons.png" alt="" class="weui-tabbar__icon">
+                    <p class="weui-tabbar__label">待审批</p>
+                </a>
+                <a href="javascript:;" class="weui-tabbar__item" id="wo" onclick="a(this.id)">
+                    <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                    <p class="weui-tabbar__label">我</p>
+                </a>
+            </div>
+        </div>
+        <div class="table-responsive"  id="dibu2" style="display: none">
+        <div class="weui-tabbar2" >
+            <a href="javascript:;" class="weui-tabbar__item" id="tongguo" onclick="a(this.id)">
+                    <span style="display: inline-block;position: relative;">
+                        <img src="./images/icon_nav_toast.png" alt="" class="weui-tabbar__icon">
+                        <!--<span class="weui-badge" style="position: absolute;top: -2px;right: -13px;">8</span>-->
+                    </span>
+                <p class="weui-tabbar__label">通过</p>
+            </a>
+            <a href="javascript:;" class="weui-tabbar__item" id="butongguo" onclick="a(this.id)">
+                <img src="./images/icon_nav_icons.png" alt="" class="weui-tabbar__icon">
+                <p class="weui-tabbar__label">不通过</p>
+            </a>
+            <a href="javascript:;" class="weui-tabbar__item" id="fanhui" onclick="b(this.id)">
+                <img src="./images/icon_nav_icons.png" alt="" class="weui-tabbar__icon">
+                <p class="weui-tabbar__label">返回</p>
+            </a>
+             <div id="toast" style="display: none;">
+        <div class="weui-mask_transparent"></div>
+        <div class="weui-toast">
+            <i class="weui-icon-success-no-circle weui-icon_toast"></i>
+            <p class="weui-toast__content">已完成</p>
+        </div>
+    </div>
+    <script src="./zepto.min.js"></script>
+            <script type="text/javascript">
+                // toast
+                $(function(){
+                    var $toast = $('#toast');
+                    $('#tongguo').on('click', function(){
+                        if ($toast.css('display') != 'none') return;
+
+                        $toast.fadeIn(100);
+                        setTimeout(function () {
+                            $toast.fadeOut(100);
+                        }, 2000);
+                    });
+                });
+                $(function(){
+                    var $toast = $('#toast');
+                    $('#butongguo').on('click', function(){
+                        if ($toast.css('display') != 'none') return;
+
+                        $toast.fadeIn(100);
+                        setTimeout(function () {
+                            $toast.fadeOut(100);
+                        }, 2000);
+                    });
+                });
+            </script>
+        </div>
+        </div>
+    </div>
+    <!--</div>-->
+    <script>
+       function a(id) {
+           var a= document.getElementById(id);
+           if(  a.className=="weui-tabbar__item weui-bar__item_on"){
+               a.className="weui-tabbar__item";
+           }
+           else{
+               a.className="weui-tabbar__item weui-bar__item_on";
+           }
+           if(id=="yishenpi"){
+               var tables=document.getElementById("table1");
+               tables.style.display="block";
+               var tables=document.getElementById("table2");
+               tables.style.display="none";
+           }
+           else if(id=="daishenpi"){
+               var tables=document.getElementById("table2");
+               tables.style.display="block";
+               var tables=document.getElementById("table1");
+               tables.style.display="none";
+               var p1=document.getElementById("dibu1");
+               p1.style.display="none";
+               var p2=document.getElementById("dibu2");
+               p2.style.display="block";
+
+           }
+           }
+        function b() {
+            var p1=document.getElementById("dibu1");
+            p1.style.display="block";
+            var p2=document.getElementById("dibu2");
+            p2.style.display="none";
+            var tables=document.getElementById("table2");
+            tables.style.display="none";
+            var tables=document.getElementById("table1");
+            tables.style.display="none";
+        }
+
+
+    </script>
+    <!-- <script src="./zepto.min.js"></script> -->
+<!--     <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="https://res.wx.qq.com/open/libs/weuijs/1.0.0/weui.min.js"></script>
+    <script src="./example.js"></script>
+ --></body>
+</html>
