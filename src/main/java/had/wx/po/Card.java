@@ -11,6 +11,10 @@ public class Card {
     private String company;
     private String duty;
     private String openId;
+    private Long finger;
+    private Long eye;
+    private String companymore;
+    private String productmore;
 
     public String getName() {
         return name;
@@ -68,6 +72,38 @@ public class Card {
         this.openId = openId;
     }
 
+    public Long getFinger() {
+        return finger;
+    }
+
+    public void setFinger(Long finger) {
+        this.finger = finger;
+    }
+
+    public Long getEye() {
+        return eye;
+    }
+
+    public void setEye(Long eye) {
+        this.eye = eye;
+    }
+
+    public String getCompanymore() {
+        return companymore;
+    }
+
+    public void setCompanymore(String companymore) {
+        this.companymore = companymore;
+    }
+
+    public String getProductmore() {
+        return productmore;
+    }
+
+    public void setProductmore(String productmore) {
+        this.productmore = productmore;
+    }
+
     @Override
     public String toString() {
         return "Card{" +
@@ -78,6 +114,10 @@ public class Card {
                 ", company='" + company + '\'' +
                 ", duty='" + duty + '\'' +
                 ", openId='" + openId + '\'' +
+                ", finger=" + finger +
+                ", eye=" + eye +
+                ", companymore='" + companymore + '\'' +
+                ", productmore='" + productmore + '\'' +
                 '}';
     }
 }

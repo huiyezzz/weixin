@@ -3,6 +3,7 @@ package had.wx.controller;
 import had.wx.mapper.CardMapper;
 import had.wx.mapper.ImageMapper;
 import had.wx.po.Card;
+import had.wx.po.Cardcuster;
 import had.wx.po.Image;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,6 +15,7 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -29,9 +31,10 @@ public class CardController {
     @RequestMapping("/CardqueryById")
     @ResponseBody
     public Card queryById(String id){
-        Card card = cardMapper.queryById(id);
-//        System.out.println(card);
-        return card;
+        Cardcuster cardcuster = cardMapper.queryById(id);
+        List<Image> images = imageMapper.queryById(id);
+        cardcuster.setList(images);
+        return cardcuster;
     }
 
     @RequestMapping("/insert")
